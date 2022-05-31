@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="heading">
+    <h1 style="color: #68A7AD;">Splitter</h1>
+    <details><p>
+      Firstly, enter a desired your bill money into input section and fill out how many people which are divided. Then select tip percentage and you will get your result according to tip Amount and total categories.
+    </p></details>
+  </div>
+
+  <div class="general-card">
+
+    <!-- Left card -->
+
+<div class="left-card">
+
+  <div class="bill">
+    <span>Bill</span> <br>
+    <label class="label-bill"><img src="images/icon-dollar.svg" alt=""></label>
+<input class="input " id="label-input" type="text" required placeholder="Fill out only with numbers"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+    
+  </div>
+
+  <div class="percentage-div">
+
+<div class="percentage-boxes">
+  <span>Select Tip %</span>
+  <div class="card-one">
+    <div class="box-1 box fifth boxes">5%</div>
+    <div class="box-2 box tenth boxes">10%</div>
+    <div class="box-3 box fifteen boxes">15%</div>
+  </div>
+  <div class="card-two">
+    <div class="box-4 box twentyFive boxes">25%</div>
+  <div class="box-5 box fifty boxes">50%</div>
+  <div class="box-6 ">Custom</div>
+  </div>
+  
+</div>
+  </div>
+
+  <div class="people">
+    <span>Number of People</span> <br>
+    <label class="label-bill"><img src="images/icon-person.svg" alt=""></label>
+<input class="input" id="people-input" 
+type="text" required placeholder="Fill out only with numbers" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+
+  </div>
+
+</div>
+
+<!-- End of left card -->
+
+
+<!-- Right card -->
+
+<div class="right-card">
+
+  <div class="tip-amount">
+    <div class="tip">
+      <div class="div distance">
+        <h4>Tip Amount</h4>
+        <span>/ person</span>
+      </div>
+      
+      <div class="tipNumber distance">
+        <span id="tipResult">$0.00</span>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="total-amount">
+    <div class="total">
+      <div class="div distance">
+        <h4>Total</h4>
+        <span>/ person</span>
+      </div>
+        <div class="totalNumber distance">
+          <span id="totalResult">$0.00</span>
+        </div>
+     
+      
+    </div>
+  </div>
+
+<div class="btn">
+  <button id="reset">Reset </button>
+
+</div>
+
+</div>
+
+  </div>
+  
+  
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="app.js"></script>
+</body>
+</html>
